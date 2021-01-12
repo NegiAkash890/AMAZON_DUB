@@ -2,6 +2,7 @@ import { act } from "react-dom/test-utils";
 
 export const intialState = {
   basket: [],
+  user: null,
 };
 //Selector
 
@@ -27,6 +28,11 @@ const reducer = (state, action) => {
         console.warn(`Cannot remove product as it's not in basket`);
       }
       return { ...state, basket: newBasket };
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
+      };
     default:
       return state;
   }
