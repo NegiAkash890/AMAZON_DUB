@@ -9,7 +9,13 @@
   max-height: 400px;
   min-width: 100px;
   background-color: white;
+  cursor: pointer;
   z-index: 1;
+  transition: 0.5s;
+}
+.product:hover {
+  transform: translate(0, 100px, 10px);
+  box-shadow: 0 0 30px grey;
 }
 .product_rating {
   display: flex;

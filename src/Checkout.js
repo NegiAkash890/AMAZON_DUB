@@ -15,10 +15,12 @@ function Checkout() {
           src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
         />
         <div>
-          <h2 className="checkout_title">
-            {" "}
-            {user?.email} , Your Shopping Basket{" "}
-          </h2>
+          <h3 className="checkout_title">
+            Hello,
+            {!user ? "Guest" : user.email}
+            <h2>Your Shopping Basket</h2>
+          </h3>
+
           {basket.map((item) => (
             <CheckoutProduct
               id={item.id}
